@@ -14,8 +14,21 @@ const handleProducerChange = (event) => {
 };
 
 useEffect(() => {
-    const fetchMovie = async () => {
-        
-    }
-})
+    const fetchMovies = async () => {
+setLoading(true);
+const producerParams = new URLSearchParams(location.search).get('producer');
+
+const url =
+producerParam === 'all' || !producerParams
+? 'https://ghibliapi.herokuapp.com/films'
+: `https://ghibliapi.herokuapp.com/films?producer=${producerParams}`;
+
+const res = await fetch(url);
+const studiolGhibliFilms = await res.json();
+
+setMovies(studiolGhibliFilms)
+setLoading(false);
+    };
+    fetchMovies();
+}, [loaction.search]);
 }
