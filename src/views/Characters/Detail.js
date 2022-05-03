@@ -9,8 +9,14 @@ export default function Detail() {
     useEffect(() => {
         const fetchMovie = async() => {
             const res = await fetch(
-                `https://ghibliapi.herokuapp.com/films`
-            )
-        }
-    })
+                `https://ghibliapi.herokuapp.com/films/${id}`
+            );
+            const movieData = await res.json();
+            setStudioghibli(movieData);
+            setLoading(false);
+        };
+        fetchMovie();
+    }, []);
+
+    
 }
