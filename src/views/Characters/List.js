@@ -9,5 +9,13 @@ export default function List() {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
 
-const handleProducerChange = 
+const handleProducerChange = (event) => {
+    history.push(`/?producer=${event.target.value}`);
+};
+
+useEffect(() => {
+    const fetchMovie = async () => {
+        
+    }
+})
 }
