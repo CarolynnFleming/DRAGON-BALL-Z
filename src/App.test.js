@@ -17,5 +17,7 @@ describe('App', () => {
         userEvent.click(link);
 
         await screen.findByText('Loading Movie...');
+
+        await screen.findByText('1986');
     })
 })
