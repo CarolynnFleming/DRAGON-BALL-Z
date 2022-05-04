@@ -28,7 +28,6 @@ export default function Detail() {
             <article>
                 <h2>{studioGhibli.title}</h2>
                 <h2>{studioGhibli.original_title}</h2>
-                <img alt={`Image of ${studioGhibli.title}`} src={studioGhibli.image} />
                 <img src={studioGhibli.movie_banner} />
                 <h4>{studioGhibli.description}</h4>
                 <h2>Director: {studioGhibli.director}</h2>

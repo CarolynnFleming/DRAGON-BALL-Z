@@ -6,7 +6,7 @@ export default function App() {
   return(
     <Router>
       <Switch>
-        <Route path="/character/:id">
+        <Route path="/characters/:id">
           <Detail />
         </Route>
         <Route path="/">

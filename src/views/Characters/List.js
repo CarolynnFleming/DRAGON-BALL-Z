@@ -57,13 +57,9 @@ return(
                         <h3>{movie.title}</h3>
                     </Link>
                     <p>{movie.original_title}</p>
-                    <p>Producer: {movie.producer}</p>
                 <img alt={`Image of ${movie.title}`} src={movie.image} />
-            <img src={movie.movie_banner} />
-                <h4>{movie.description}</h4>
                 <h2>Director: {movie.director}</h2>
                 <p>Producer: {movie.producer}</p>
-                <h2>{movie.release_date}</h2>
                 </article>
             ))}
         </section>
