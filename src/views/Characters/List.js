@@ -59,7 +59,7 @@ return(
                     <p>{movie.original_title}</p>
                 <img alt={`Image of ${movie.title}`} src={movie.image} />
                 <h2>Director: {movie.director}</h2>
-                <p>Producer: {movie.producer}</p>
+                <h2>Producer: {movie.producer}</h2>
                 </article>
             ))}
         </section>

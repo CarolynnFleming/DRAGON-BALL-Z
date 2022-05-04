@@ -31,9 +31,8 @@ export default function Detail() {
                 <img src={studioGhibli.movie_banner} />
                 <h4>{studioGhibli.description}</h4>
                 <h2>Director: {studioGhibli.director}</h2>
-                <p>Producer: {studioGhibli.producer}</p>
+                <h2>Producer: {studioGhibli.producer}</h2>
                 <h2>{studioGhibli.release_date}</h2>
-                <p>Characters: {studioGhibli.people}</p>
                 
 
             </article>
