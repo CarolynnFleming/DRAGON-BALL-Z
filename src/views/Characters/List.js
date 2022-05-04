@@ -1,4 +1,3 @@
-import { loadPartialConfig } from "@babel/core";
 import { useEffect, useState } from "react";
 import { Link, useHistory, useLocation } from 'react-router-dom'
 
@@ -19,7 +18,7 @@ setLoading(true);
 const producerParams = new URLSearchParams(location.search).get('producer');
 
 const url =
-producerParam === 'all' || !producerParams
+producerParams === 'all' || !producerParams
 ? 'https://ghibliapi.herokuapp.com/films'
 : `https://ghibliapi.herokuapp.com/films?producer=${producerParams}`;
 
@@ -30,7 +29,7 @@ setMovies(studiolGhibliFilms)
 setLoading(false);
     };
     fetchMovies();
-}, [loaction.search]);
+}, [location.search]);
 
 return(
     <>
@@ -58,8 +57,13 @@ return(
                         <h3>{movie.title}</h3>
                     </Link>
                     <p>{movie.original_title}</p>
-                    <p>{movie.director}</p>
                     <p>Producer: {movie.producer}</p>
+                <img alt={`Image of ${movie.title}`} src={movie.image} />
+            <img src={movie.movie_banner} />
+                <h4>{movie.description}</h4>
+                <h2>Director: {movie.director}</h2>
+                <p>Producer: {movie.producer}</p>
+                <h2>{movie.release_date}</h2>
                 </article>
             ))}
         </section>
