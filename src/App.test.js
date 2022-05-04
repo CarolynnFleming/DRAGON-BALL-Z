@@ -15,5 +15,7 @@ describe('App', () => {
 //for list page
         const link = await screen.findByText('Castle in the Sky');
         userEvent.click(link);
+
+        await screen.findByText('Loading Movie...');
     })
 })
